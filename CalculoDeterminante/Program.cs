@@ -9,7 +9,7 @@ namespace CalculoDeterminante
             int tamanhoMatriz = 0, i = 0, j = 0;
 
             Console.Clear();
-            Console.WriteLine("--- CALCULADORA DE DETERMINANTE DE UMA MATRIZ QUADRADA---");
+            Console.WriteLine("-- CALCULADORA DE DETERMINANTE DE UMA MATRIZ QUADRADA --");
                 Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Lucas Tozo Monção, programa feito para a disciplina V.G.A. - prof. Dornellas");
                 Console.ResetColor();
@@ -18,6 +18,12 @@ namespace CalculoDeterminante
             try
             {
                 tamanhoMatriz = Convert.ToInt32(Console.ReadLine());
+                if(tamanhoMatriz == 0)
+                {
+                    Helper.EscreverErro("O tamanho da matriz não pode ser zero.");
+                    Console.ReadKey();
+                    Main();
+                }
             }
             catch
             {
