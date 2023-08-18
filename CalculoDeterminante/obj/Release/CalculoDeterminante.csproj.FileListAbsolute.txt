@@ -1,0 +1,8 @@
+C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\CalculoDeterminante\bin\Release\CalculoDeterminante.exe.config
+C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\CalculoDeterminante\bin\Release\CalculoDeterminante.exe
+C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\CalculoDeterminante\bin\Release\CalculoDeterminante.pdb
+C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\CalculoDeterminante\obj\Release\CalculoDeterminante.csproj.AssemblyReference.cache
+C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\CalculoDeterminante\obj\Release\CalculoDeterminante.csproj.SuggestedBindingRedirects.cache
+C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\CalculoDeterminante\obj\Release\CalculoDeterminante.csproj.CoreCompileInputs.cache
+C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\CalculoDeterminante\obj\Release\CalculoDeterminante.exe
+C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\CalculoDeterminante\obj\Release\CalculoDeterminante.pdb
