@@ -18,9 +18,9 @@ namespace CalculoDeterminante
             try
             {
                 tamanhoMatriz = Convert.ToInt32(Console.ReadLine());
-                if(tamanhoMatriz == 0)
+                if(tamanhoMatriz <= 0)
                 {
-                    Helper.EscreverErro("O tamanho da matriz não pode ser zero.");
+                    Helper.EscreverErro("O tamanho da matriz precisa ser maior que zero.");
                     Console.ReadKey();
                     Main();
                 }
