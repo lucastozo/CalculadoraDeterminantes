@@ -74,7 +74,12 @@ namespace DeterminanteForms.Helper
         private static void TextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             var textBox = sender as TextBox;
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '-' || textBox.SelectionStart != 0))
+            bool alreadyHasDot = textBox.Text.Contains(".");
+            bool alreadyHasComma = textBox.Text.Contains(",");
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)
+                && (e.KeyChar != '-' || textBox.SelectionStart != 0 || (textBox.SelectionLength == 0 && textBox.SelectionStart < textBox.Text.Length && (textBox.Text[textBox.SelectionStart] == '.' || textBox.Text[textBox.SelectionStart] == ',')))
+                && (e.KeyChar != '.' || alreadyHasDot || alreadyHasComma || textBox.SelectionStart == 0 || (textBox.SelectionLength == 0 && textBox.SelectionStart > 0 && textBox.Text[textBox.SelectionStart - 1] == '-'))
+                && (e.KeyChar != ',' || alreadyHasComma || alreadyHasDot || textBox.SelectionStart == 0 || (textBox.SelectionLength == 0 && textBox.SelectionStart > 0 && textBox.Text[textBox.SelectionStart - 1] == '-')))
             {
                 e.Handled = true;
             }

@@ -11,10 +11,10 @@ namespace CalculoDeterminante
             Console.ResetColor();
         }
 
-        public static void ImprimirMatriz(double[,] matriz)
+        public static void ImprimirMatriz(double[,] matriz, string mensagem)
         {
             Console.Clear();
-            Console.WriteLine("-- MATRIZ GERADA --");
+            Console.WriteLine(mensagem);
             Console.WriteLine();
 
             int linhas = matriz.GetLength(0);

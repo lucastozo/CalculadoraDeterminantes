@@ -45,31 +45,47 @@ namespace CalculoDeterminante
             Console.WriteLine(", confirme para prosseguir. [S/N]");
             if (Console.ReadLine().ToUpper() != "S")
             {
-                Console.Clear();
                 Main();
             }
-
             double[,] matriz = new double[tamanhoMatriz, tamanhoMatriz];
-            Console.Clear();
 
             while (i < tamanhoMatriz)
             {
                 j = 0;
                 while (j < tamanhoMatriz)
                 {
-                    bool entradaValida;
+                    bool entradaValida = true;
                     do
                     {
+                        Helper.ImprimirMatriz(matriz, "-- MATRIZ ATUAL --");
+                        if(entradaValida == false)
+                        {
+                            Helper.EscreverErro("O valor a ser inserido na matriz precisa ser um número.");
+                        }
                         Console.Write($"Insira o valor para a posição [Linha {i + 1}, Coluna {j + 1}]: ");
+                        string input = Console.ReadLine();
+                        if(input == "/fim")
+                        {
+                            while (i < tamanhoMatriz)
+                            {
+                                while (j < tamanhoMatriz)
+                                {
+                                    matriz[i, j] = 0;
+                                    j++;
+                                }
+                                i++;
+                            }
+
+                            break;
+                        }
                         try
                         {
-                            matriz[i, j] = Convert.ToDouble(Console.ReadLine());
+                            matriz[i, j] = Convert.ToDouble(input);
                             entradaValida = true;
                             j++;
                         }
                         catch
                         {
-                            Helper.EscreverErro("O valor a ser inserido na matriz precisa ser um número.");
                             entradaValida = false;
                         }
                     }
@@ -79,7 +95,7 @@ namespace CalculoDeterminante
             }
 
             Console.WriteLine();
-            Helper.ImprimirMatriz(matriz);
+            Helper.ImprimirMatriz(matriz, "-- MATRIZ GERADA --");
                 Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("A determinante da matriz é: " + Calculo.Determinante(matriz));
                 Console.ResetColor();
