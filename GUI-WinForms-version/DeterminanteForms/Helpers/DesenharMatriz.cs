@@ -51,8 +51,8 @@ namespace DeterminanteForms.Helper
                 for (int j = 0; j < size; j++)
                 {
                     var textBox = new TextBox();
-                    textBox.Width = 60;
-                    textBox.Height = 30;
+                    textBox.Width = 65;
+                    textBox.Height = 40;
                     textBox.MaxLength = 7;
                     textBox.TextAlign = HorizontalAlignment.Center;
                     textBox.Top = margin + i * (textBox.Height + 5);

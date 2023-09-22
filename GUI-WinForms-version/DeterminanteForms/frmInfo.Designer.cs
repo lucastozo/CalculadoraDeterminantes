@@ -36,9 +36,21 @@
             this.lbVersion = new System.Windows.Forms.Label();
             this.lbAuthor = new System.Windows.Forms.Label();
             pbIcon = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(pbIcon)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // pbIcon
+            // 
+            pbIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            pbIcon.Dock = System.Windows.Forms.DockStyle.Fill;
+            pbIcon.Image = ((System.Drawing.Image)(resources.GetObject("pbIcon.Image")));
+            pbIcon.Location = new System.Drawing.Point(203, 3);
+            pbIcon.Name = "pbIcon";
+            pbIcon.Size = new System.Drawing.Size(394, 118);
+            pbIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            pbIcon.TabIndex = 0;
+            pbIcon.TabStop = false;
             // 
             // tableLayoutPanel1
             // 
@@ -62,26 +74,14 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // pbIcon
-            // 
-            pbIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            pbIcon.Dock = System.Windows.Forms.DockStyle.Fill;
-            pbIcon.Image = global::DeterminanteForms.Properties.Resources.matrix_icon;
-            pbIcon.Location = new System.Drawing.Point(203, 3);
-            pbIcon.Name = "pbIcon";
-            pbIcon.Size = new System.Drawing.Size(393, 119);
-            pbIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            pbIcon.TabIndex = 0;
-            pbIcon.TabStop = false;
-            // 
             // lbMiddleText
             // 
             this.lbMiddleText.AutoSize = true;
             this.lbMiddleText.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbMiddleText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMiddleText.Location = new System.Drawing.Point(203, 175);
+            this.lbMiddleText.Location = new System.Drawing.Point(203, 173);
             this.lbMiddleText.Name = "lbMiddleText";
-            this.lbMiddleText.Size = new System.Drawing.Size(393, 200);
+            this.lbMiddleText.Size = new System.Drawing.Size(394, 199);
             this.lbMiddleText.TabIndex = 1;
             this.lbMiddleText.Text = "Trabalho feito para a disciplina de V.G.A.\r\nprof. Dornellas\r\nUFMT - IC";
             this.lbMiddleText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -91,10 +91,10 @@
             this.lbName.AutoSize = true;
             this.lbName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.Location = new System.Drawing.Point(203, 125);
+            this.lbName.Location = new System.Drawing.Point(203, 124);
             this.lbName.Name = "lbName";
             this.lbName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbName.Size = new System.Drawing.Size(393, 50);
+            this.lbName.Size = new System.Drawing.Size(394, 49);
             this.lbName.TabIndex = 2;
             this.lbName.Text = "Calculadora de Determinante de Matrizes";
             this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -103,9 +103,9 @@
             // 
             this.lbVersion.AutoSize = true;
             this.lbVersion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbVersion.Location = new System.Drawing.Point(3, 375);
+            this.lbVersion.Location = new System.Drawing.Point(3, 372);
             this.lbVersion.Name = "lbVersion";
-            this.lbVersion.Size = new System.Drawing.Size(194, 75);
+            this.lbVersion.Size = new System.Drawing.Size(194, 78);
             this.lbVersion.TabIndex = 3;
             this.lbVersion.Text = "Versão: x.x";
             this.lbVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -114,9 +114,9 @@
             // 
             this.lbAuthor.AutoSize = true;
             this.lbAuthor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbAuthor.Location = new System.Drawing.Point(602, 375);
+            this.lbAuthor.Location = new System.Drawing.Point(603, 372);
             this.lbAuthor.Name = "lbAuthor";
-            this.lbAuthor.Size = new System.Drawing.Size(195, 75);
+            this.lbAuthor.Size = new System.Drawing.Size(194, 78);
             this.lbAuthor.TabIndex = 4;
             this.lbAuthor.Text = "Autor: Lucas Tozo Monção";
             this.lbAuthor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -131,9 +131,9 @@
             this.Name = "frmInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Informações";
+            ((System.ComponentModel.ISupportInitialize)(pbIcon)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(pbIcon)).EndInit();
             this.ResumeLayout(false);
 
         }

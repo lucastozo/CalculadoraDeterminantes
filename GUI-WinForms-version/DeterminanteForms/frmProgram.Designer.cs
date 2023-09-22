@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.gerarNovaMatrizToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salvarMatrizToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.carregarMatrizToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btInfo = new System.Windows.Forms.ToolStripButton();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.btCalcular = new System.Windows.Forms.ToolStripButton();
             this.panelMatrixField = new System.Windows.Forms.Panel();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.gerarNovaMatrizToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salvarMatrizToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.carregarMatrizToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -55,6 +55,39 @@
             this.toolStrip1.Size = new System.Drawing.Size(1204, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gerarNovaMatrizToolStripMenuItem,
+            this.salvarMatrizToolStripMenuItem,
+            this.carregarMatrizToolStripMenuItem});
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(62, 22);
+            this.toolStripDropDownButton1.Text = "Arquivo";
+            // 
+            // gerarNovaMatrizToolStripMenuItem
+            // 
+            this.gerarNovaMatrizToolStripMenuItem.Name = "gerarNovaMatrizToolStripMenuItem";
+            this.gerarNovaMatrizToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.gerarNovaMatrizToolStripMenuItem.Text = "Gerar Nova Matriz";
+            this.gerarNovaMatrizToolStripMenuItem.Click += new System.EventHandler(this.btNovaMatriz_Click);
+            // 
+            // salvarMatrizToolStripMenuItem
+            // 
+            this.salvarMatrizToolStripMenuItem.Name = "salvarMatrizToolStripMenuItem";
+            this.salvarMatrizToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.salvarMatrizToolStripMenuItem.Text = "Salvar Matriz";
+            this.salvarMatrizToolStripMenuItem.Click += new System.EventHandler(this.btSalvarMatriz_Click);
+            // 
+            // carregarMatrizToolStripMenuItem
+            // 
+            this.carregarMatrizToolStripMenuItem.Name = "carregarMatrizToolStripMenuItem";
+            this.carregarMatrizToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.carregarMatrizToolStripMenuItem.Text = "Carregar Matriz";
+            this.carregarMatrizToolStripMenuItem.Click += new System.EventHandler(this.btCarregarMatriz_Click);
             // 
             // toolStripSeparator1
             // 
@@ -108,39 +141,6 @@
             this.panelMatrixField.Name = "panelMatrixField";
             this.panelMatrixField.Size = new System.Drawing.Size(1204, 582);
             this.panelMatrixField.TabIndex = 2;
-            // 
-            // toolStripDropDownButton1
-            // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gerarNovaMatrizToolStripMenuItem,
-            this.salvarMatrizToolStripMenuItem,
-            this.carregarMatrizToolStripMenuItem});
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(62, 22);
-            this.toolStripDropDownButton1.Text = "Arquivo";
-            // 
-            // gerarNovaMatrizToolStripMenuItem
-            // 
-            this.gerarNovaMatrizToolStripMenuItem.Name = "gerarNovaMatrizToolStripMenuItem";
-            this.gerarNovaMatrizToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.gerarNovaMatrizToolStripMenuItem.Text = "Gerar Nova Matriz";
-            this.gerarNovaMatrizToolStripMenuItem.Click += new System.EventHandler(this.btNovaMatriz_Click);
-            // 
-            // salvarMatrizToolStripMenuItem
-            // 
-            this.salvarMatrizToolStripMenuItem.Name = "salvarMatrizToolStripMenuItem";
-            this.salvarMatrizToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.salvarMatrizToolStripMenuItem.Text = "Salvar Matriz";
-            this.salvarMatrizToolStripMenuItem.Click += new System.EventHandler(this.btSalvarMatriz_Click);
-            // 
-            // carregarMatrizToolStripMenuItem
-            // 
-            this.carregarMatrizToolStripMenuItem.Name = "carregarMatrizToolStripMenuItem";
-            this.carregarMatrizToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.carregarMatrizToolStripMenuItem.Text = "Carregar Matriz";
-            this.carregarMatrizToolStripMenuItem.Click += new System.EventHandler(this.btCarregarMatriz_Click);
             // 
             // frmMain
             // 

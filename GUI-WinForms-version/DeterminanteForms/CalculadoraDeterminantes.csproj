@@ -70,17 +70,17 @@
     </Compile>
     <Compile Include="Helpers\DesenharMatriz.cs" />
     <Compile Include="Helpers\Calculo.cs" />
-    <Compile Include="frmDeterminante.cs">
+    <Compile Include="frmProgram.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDeterminante.Designer.cs">
-      <DependentUpon>frmDeterminante.cs</DependentUpon>
+    <Compile Include="frmProgram.Designer.cs">
+      <DependentUpon>frmProgram.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\SaveLoad.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmDeterminante.resx">
-      <DependentUpon>frmDeterminante.cs</DependentUpon>
+    <EmbeddedResource Include="frmProgram.resx">
+      <DependentUpon>frmProgram.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInfo.resx">
       <DependentUpon>frmInfo.cs</DependentUpon>
@@ -109,9 +109,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\matrix_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
@@ -122,6 +119,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\matrix_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
