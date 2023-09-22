@@ -14,3 +14,11 @@ C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\CalculoDeterminante\obj\
 C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\CalculoDeterminante\obj\Debug\CalculoDeterminante.csproj.CoreCompileInputs.cache
 C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\CalculoDeterminante\obj\Debug\CalculoDeterminante.exe
 C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\CalculoDeterminante\obj\Debug\CalculoDeterminante.pdb
+C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\CLI-version\CalculoDeterminante\bin\Debug\CalculoDeterminante.exe.config
+C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\CLI-version\CalculoDeterminante\bin\Debug\CalculoDeterminante.exe
+C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\CLI-version\CalculoDeterminante\bin\Debug\CalculoDeterminante.pdb
+C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\CLI-version\CalculoDeterminante\obj\Debug\CalculoDeterminante.csproj.AssemblyReference.cache
+C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\CLI-version\CalculoDeterminante\obj\Debug\CalculoDeterminante.csproj.SuggestedBindingRedirects.cache
+C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\CLI-version\CalculoDeterminante\obj\Debug\CalculoDeterminante.csproj.CoreCompileInputs.cache
+C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\CLI-version\CalculoDeterminante\obj\Debug\CalculoDeterminante.exe
+C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\CLI-version\CalculoDeterminante\obj\Debug\CalculoDeterminante.pdb

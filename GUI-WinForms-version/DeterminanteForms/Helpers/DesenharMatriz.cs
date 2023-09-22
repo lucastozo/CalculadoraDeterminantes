@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,7 +8,7 @@ using System.Windows.Forms;
 
 namespace DeterminanteForms.Helper
 {
-    internal class DrawMatrix
+    internal class DesenharMatriz
     {
         public static int RequestMatrixSize(int matrixSize, Panel panelMatrixField)
         {
@@ -38,7 +39,7 @@ namespace DeterminanteForms.Helper
 
             return matrixSize;
         }
-        public static void AddMatrixFields(int size, Panel panelMatrixField)
+        public static void AddMatrixFields(int size, Panel panelMatrixField, double[,] values = null)
         {
             // Limpa o painel
             panelMatrixField.Controls.Clear();
@@ -50,14 +51,21 @@ namespace DeterminanteForms.Helper
                 for (int j = 0; j < size; j++)
                 {
                     var textBox = new TextBox();
-                    textBox.Width = 50;
-                    textBox.Height = 20;
-                    textBox.MaxLength = 5;
+                    textBox.Width = 60;
+                    textBox.Height = 30;
+                    textBox.MaxLength = 7;
                     textBox.TextAlign = HorizontalAlignment.Center;
                     textBox.Top = margin + i * (textBox.Height + 5);
                     textBox.Left = margin + j * (textBox.Width + 5);
                     textBox.KeyPress += TextBox_KeyPress;
                     textBox.Margin = new Padding(10);
+
+                    // Se a matriz de valores foi fornecida, carrega o valor no campo de texto
+                    if (values != null)
+                    {
+                        textBox.Text = values[i, j].ToString();
+                    }
+
                     panelMatrixField.Controls.Add(textBox);
                 }
             }

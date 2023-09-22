@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace DeterminanteForms
 {
-    internal class Calculate
+    internal class Calculo
     {
         public static double[,] GetMatrixFromFields(int size, Panel panelMatrixField)
         {
@@ -19,7 +19,7 @@ namespace DeterminanteForms
                 {
                     int i = index / size;
                     int j = index % size;
-                    if (string.IsNullOrEmpty(control.Text) || control.Text=="-")
+                    if (string.IsNullOrEmpty(control.Text) || control.Text == "-")
                     {
                         matrix[i, j] = 0;
                     }
@@ -36,43 +36,49 @@ namespace DeterminanteForms
         public static double Determinante(double[,] matriz)
         {
             int tamanho = matriz.GetLength(0);
-            if (tamanho > 2)
-            {
-                double soma = 0;
-                for (int i = 0; i < tamanho; i++)
-                {
-                    double[,] subMatriz = GetSubMatriz(matriz, i);
-                    soma += Math.Pow(-1, i) * matriz[0, i] * Determinante(subMatriz);
-                }
-                return soma;
-            }
-            else if (tamanho == 2)
-            {
-                return matriz[0, 0] * matriz[1, 1] - matriz[0, 1] * matriz[1, 0];
-            }
-            else
-            {
-                return matriz[0, 0];
-            }
-        }
+            double det = 1;
+            int trocas = 0;
 
-        static double[,] GetSubMatriz(double[,] matrizOriginal, int colunaARemover)
-        {
-            int tamanho = matrizOriginal.GetLength(0);
-            double[,] subMatriz = new double[tamanho - 1, tamanho - 1];
-            int colunaSubMatriz = 0;
-            for (int i = 0; i < tamanho; i++)
+            for (int p = 0; p < tamanho; p++)
             {
-                if (i != colunaARemover)
+                int max = p;
+                for (int i = p + 1; i < tamanho; i++)
                 {
-                    for (int j = 1; j < tamanho; j++)
+                    if (Math.Abs(matriz[i, p]) > Math.Abs(matriz[max, p]))
                     {
-                        subMatriz[j - 1, colunaSubMatriz] = matrizOriginal[j, i];
+                        max = i;
                     }
-                    colunaSubMatriz++;
+                }
+
+                if (p != max)
+                {
+                    double[] temp = new double[tamanho];
+                    for (int i = 0; i < tamanho; i++)
+                    {
+                        temp[i] = matriz[p, i];
+                        matriz[p, i] = matriz[max, i];
+                        matriz[max, i] = temp[i];
+                    }
+                    trocas++;
+                }
+
+                det *= matriz[p, p];
+                if (Math.Abs(det) <= 0.000001)
+                {
+                    return 0;
+                }
+
+                for (int i = p + 1; i < tamanho; i++)
+                {
+                    double f = matriz[i, p] / matriz[p, p];
+                    for (int j = p + 1; j < tamanho; j++)
+                    {
+                        matriz[i, j] -= f * matriz[p, j];
+                    }
+                    matriz[i, p] = 0;
                 }
             }
-            return subMatriz;
+            return (trocas % 2 == 0 ? 1 : -1) * det;
         }
 
         public static double CalcularDeterminante(int matrixSize, Panel panelMatrixField)

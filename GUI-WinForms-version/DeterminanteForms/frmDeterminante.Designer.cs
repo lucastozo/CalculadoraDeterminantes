@@ -30,12 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btNovaMatriz = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btInfo = new System.Windows.Forms.ToolStripButton();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.btCalcular = new System.Windows.Forms.ToolStripButton();
             this.panelMatrixField = new System.Windows.Forms.Panel();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.gerarNovaMatrizToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salvarMatrizToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.carregarMatrizToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -44,7 +47,7 @@
             // 
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btNovaMatriz,
+            this.toolStripDropDownButton1,
             this.toolStripSeparator1,
             this.btInfo});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
@@ -52,15 +55,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(1204, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // btNovaMatriz
-            // 
-            this.btNovaMatriz.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btNovaMatriz.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btNovaMatriz.Name = "btNovaMatriz";
-            this.btNovaMatriz.Size = new System.Drawing.Size(75, 22);
-            this.btNovaMatriz.Text = "Nova Matriz";
-            this.btNovaMatriz.Click += new System.EventHandler(this.btNovaMatriz_Click);
             // 
             // toolStripSeparator1
             // 
@@ -93,17 +87,16 @@
             // btCalcular
             // 
             this.btCalcular.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btCalcular.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btCalcular.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.btCalcular.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.btCalcular.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCalcular.Image = ((System.Drawing.Image)(resources.GetObject("btCalcular.Image")));
             this.btCalcular.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btCalcular.Margin = new System.Windows.Forms.Padding(5);
             this.btCalcular.Name = "btCalcular";
             this.btCalcular.Padding = new System.Windows.Forms.Padding(5);
-            this.btCalcular.Size = new System.Drawing.Size(101, 44);
-            this.btCalcular.Text = "Calcular";
-            this.btCalcular.ToolTipText = "Calcular determinante";
+            this.btCalcular.Size = new System.Drawing.Size(234, 44);
+            this.btCalcular.Text = "Calcular Determinante";
+            this.btCalcular.ToolTipText = "Calcular";
             this.btCalcular.Click += new System.EventHandler(this.btCalcular_Click);
             // 
             // panelMatrixField
@@ -115,6 +108,39 @@
             this.panelMatrixField.Name = "panelMatrixField";
             this.panelMatrixField.Size = new System.Drawing.Size(1204, 582);
             this.panelMatrixField.TabIndex = 2;
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gerarNovaMatrizToolStripMenuItem,
+            this.salvarMatrizToolStripMenuItem,
+            this.carregarMatrizToolStripMenuItem});
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(62, 22);
+            this.toolStripDropDownButton1.Text = "Arquivo";
+            // 
+            // gerarNovaMatrizToolStripMenuItem
+            // 
+            this.gerarNovaMatrizToolStripMenuItem.Name = "gerarNovaMatrizToolStripMenuItem";
+            this.gerarNovaMatrizToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gerarNovaMatrizToolStripMenuItem.Text = "Gerar Nova Matriz";
+            this.gerarNovaMatrizToolStripMenuItem.Click += new System.EventHandler(this.btNovaMatriz_Click);
+            // 
+            // salvarMatrizToolStripMenuItem
+            // 
+            this.salvarMatrizToolStripMenuItem.Name = "salvarMatrizToolStripMenuItem";
+            this.salvarMatrizToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salvarMatrizToolStripMenuItem.Text = "Salvar Matriz";
+            this.salvarMatrizToolStripMenuItem.Click += new System.EventHandler(this.btSalvarMatriz_Click);
+            // 
+            // carregarMatrizToolStripMenuItem
+            // 
+            this.carregarMatrizToolStripMenuItem.Name = "carregarMatrizToolStripMenuItem";
+            this.carregarMatrizToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.carregarMatrizToolStripMenuItem.Text = "Carregar Matriz";
+            this.carregarMatrizToolStripMenuItem.Click += new System.EventHandler(this.btCarregarMatriz_Click);
             // 
             // frmMain
             // 
@@ -144,8 +170,11 @@
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.Panel panelMatrixField;
         private System.Windows.Forms.ToolStripButton btCalcular;
-        private System.Windows.Forms.ToolStripButton btNovaMatriz;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripMenuItem gerarNovaMatrizToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salvarMatrizToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem carregarMatrizToolStripMenuItem;
     }
 }
 

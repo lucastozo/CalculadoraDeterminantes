@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Reflection;
 
 namespace CalculoDeterminante
 {
@@ -10,6 +12,9 @@ namespace CalculoDeterminante
 
             Console.Clear();
             Console.WriteLine("-- CALCULADORA DE DETERMINANTE DE UMA MATRIZ QUADRADA --");
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            FileVersionInfo versionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
+            Console.WriteLine($"versão: {versionInfo.FileVersion}");
                 Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Lucas Tozo Monção, programa feito para a disciplina V.G.A. - prof. Dornellas");
                 Console.ResetColor();

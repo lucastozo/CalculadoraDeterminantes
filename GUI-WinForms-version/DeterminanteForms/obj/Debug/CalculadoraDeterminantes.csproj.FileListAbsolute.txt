@@ -1,0 +1,12 @@
+C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\GUI-WinForms-version\DeterminanteForms\obj\Debug\CalculadoraDeterminantes.csproj.AssemblyReference.cache
+C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\GUI-WinForms-version\DeterminanteForms\obj\Debug\CalculadoraDeterminantes.csproj.SuggestedBindingRedirects.cache
+C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\GUI-WinForms-version\DeterminanteForms\obj\Debug\DeterminanteForms.frmMain.resources
+C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\GUI-WinForms-version\DeterminanteForms\obj\Debug\DeterminanteForms.frmInfo.resources
+C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\GUI-WinForms-version\DeterminanteForms\obj\Debug\CalculadoraDeterminantes.csproj.GenerateResource.cache
+C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\GUI-WinForms-version\DeterminanteForms\obj\Debug\CalculadoraDeterminantes.csproj.CoreCompileInputs.cache
+C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\GUI-WinForms-version\DeterminanteForms\bin\Debug\DeterminanteForms.exe.config
+C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\GUI-WinForms-version\DeterminanteForms\bin\Debug\DeterminanteForms.exe
+C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\GUI-WinForms-version\DeterminanteForms\bin\Debug\DeterminanteForms.pdb
+C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\GUI-WinForms-version\DeterminanteForms\obj\Debug\DeterminanteForms.Properties.Resources.resources
+C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\GUI-WinForms-version\DeterminanteForms\obj\Debug\DeterminanteForms.exe
+C:\Users\Tozo\Documents\GitHub\CalculadoraDeterminantes\GUI-WinForms-version\DeterminanteForms\obj\Debug\DeterminanteForms.pdb

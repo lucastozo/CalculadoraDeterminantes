@@ -26,7 +26,7 @@ namespace DeterminanteForms
             FileVersionInfo versionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
             string currentVersion = versionInfo.FileVersion;
 
-            lbVersion.Text = "Version: " + currentVersion;
+            lbVersion.Text = "Versão: " + currentVersion;
         }
     }
 }
